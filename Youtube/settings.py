@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'Youtube.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd7937v20s12q5s',
+        'USER': 'vquhfyrunplqwg',
+        'PASSWORD': '322c2556f8e9275016a3b8dc216e4040b6243e57d4ef34986d477d24b1d194fc',
+        'HOST': 'ec2-107-20-251-130.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
