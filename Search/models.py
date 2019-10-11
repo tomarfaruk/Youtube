@@ -9,11 +9,18 @@ class SearchKeyWord(models.Model):
     def __str__(self):
         return self.keyword
 
-# class Video(models.Model):
-#     title = models.CharField()
-#     description = models.CharField()
-#     url = models.URLField()
-#     thumbnail = models.CharField()
-#     channel_title = models.CharField()
-#     pub_date = models.DateTimeField()
-#     channel_link = models.URLField()
+class Video(models.Model):
+    title = models.TextField()
+    description = models.TextField(blank=True, null=True)
+    video_url = models.URLField(unique=True)
+    thumbnail = models.URLField()
+    channel_title = models.CharField(max_length=200)
+    pub_date = models.DateTimeField()
+    channel_url = models.URLField()
+    video_duration = models.DurationField()
+
+    def __str__(self):
+        return self.title
+
+
+

@@ -2,7 +2,18 @@ import requests
 from isodate import parse_duration
 from django.conf import settings
 from django.shortcuts import render, redirect
-from .models import SearchKeyWord
+from .models import SearchKeyWord, Video
+from .serializers import VideoSerializer
+from rest_framework import viewsets, filters
+
+
+class VideoView(viewsets.ModelViewSet):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+    # filter_backends = [filters.SearchFilter]
+    # search_fields = ['title', 'description', ]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
 
 def get_client_ip(request):
@@ -36,7 +47,7 @@ def index(request):
             'part': 'snippet',
             'q': search_keyword,
             'key': settings.YOUTUBE_DATA_API_KEY,
-            'maxResults': 10,
+            'maxResults': 12,
             'type': 'video'
         }
 
@@ -59,7 +70,7 @@ def index(request):
             'key': settings.YOUTUBE_DATA_API_KEY,
             'part': 'snippet,contentDetails',
             'id': ','.join(video_ids),
-            'maxResults': 10
+            'maxResults': 12
         }
 
         r = requests.get(video_url, params=video_params)
@@ -67,7 +78,31 @@ def index(request):
 
         results = r.json()['items']
 
+
         for result in results:
+            title = result['snippet']['title']
+            video_url = f'https://www.youtube.com/watch?v={result["id"]}'
+            pub_date = result['snippet']['publishedAt']
+            channel_url = f"https://www.youtube.com/watch?v={result['snippet']['channelId']}"
+            channel_title = result['snippet']['channelTitle']
+            description = result['snippet']['description']
+            thumbnail = result['snippet']['thumbnails']['high']['url']
+            duration = result['contentDetails']['duration']
+            is_exist = Video.objects.filter(video_url__exact=video_url).exists()
+            print('result is ', is_exist)
+            if not is_exist:
+                Video.objects.create(title=title, video_url=video_url, pub_date=pub_date,
+                                     channel_title=channel_title, channel_url=channel_url,
+                                     description=description, thumbnail=thumbnail, video_duration=duration)
+            # print('title 1', title)
+            # print('video url 2', video_url)
+            # print('pub date 3', pub_date)
+            # print('channel title 4', channel_title)
+            # print('channel url 5', channel_url)
+            # print('duration 6', duration)
+            # print('description 7', description)
+            # print('thumbnail 8', thumbnail)
+
             video_data = {
                 'title': result['snippet']['title'],
                 'id': result['id'],
