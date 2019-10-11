@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8b3a45-1bc5-41ec-9751-d58b9687fab9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Search/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Youtube/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +112,16 @@
       <workItem from="1570501854076" duration="11000" />
       <workItem from="1570526237693" duration="3554000" />
       <workItem from="1570641343349" duration="11048000" />
-      <workItem from="1570811689577" duration="7341000" />
+      <workItem from="1570811689577" duration="7571000" />
     </task>
+    <task id="LOCAL-00001" summary="rest api">
+      <created>1570821460637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570821460637</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +139,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rest api" />
+    <option name="LAST_COMMIT_MESSAGE" value="rest api" />
   </component>
 </project>
