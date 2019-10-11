@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8b3a45-1bc5-41ec-9751-d58b9687fab9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Youtube/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,7 +113,7 @@
       <workItem from="1570501854076" duration="11000" />
       <workItem from="1570526237693" duration="3554000" />
       <workItem from="1570641343349" duration="11048000" />
-      <workItem from="1570811689577" duration="7571000" />
+      <workItem from="1570811689577" duration="7944000" />
     </task>
     <task id="LOCAL-00001" summary="rest api">
       <created>1570821460637</created>
