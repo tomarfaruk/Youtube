@@ -79,12 +79,6 @@ WSGI_APPLICATION = 'Youtube.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7937v20s12q5s',
-        'USER': 'vquhfyrunplqwg',
-        'PASSWORD': '322c2556f8e9275016a3b8dc216e4040b6243e57d4ef34986d477d24b1d194fc',
-        'HOST': 'ec2-107-20-251-130.compute-1.amazonaws.com',
-        'PORT': '5432',
     }
 }
 
@@ -131,7 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # my youtube api key
-YOUTUBE_DATA_API_KEY = 'AIzaSyBAys1UfmlW9a_z1qiHsaAn5-2hEx9st3I'
+YOUTUBE_DATA_API_KEY = 'your youtube token'
 
 
 # api permission set default
